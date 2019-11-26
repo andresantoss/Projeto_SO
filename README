@@ -1,17 +1,17 @@
 Trabalho de Sistemas Operacional Segundo Semestre
 
-Alunos:			            RA:
+Alunos:				RA:
 André Gustavo Santos		21900345
 Davi Siqueira Galati		21905069
 Maria Eduarda Duarte		21908981
 
 Abra o Terminal.
-
-UBUNTU:
-mkdir pasta
-cd pasta
-git clone https://github.com/andresantoss/Projeto_SO.git
-cd Projeto_SO.pasta
-python3 projetoso.py
+		
+LINUX:
+	Use o código "mkdir" para criar uma pasta no disco, com qualqure nome.
+	Use o código "cd (nome da pasta)" para acessar a pasta.
+	Coloque no terminal o códgio "git clone https://github.com/andresantoss/Projeto_SO.git"
+	Use o código "cd Projeto_SO.(nome da pasta).
+	Execute o código: "python3 projeto.py"
 
 WINDWONS:
