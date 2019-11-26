@@ -15,3 +15,8 @@ LINUX:
 	Execute o código: "python3 projeto.py"
 
 WINDWONS:
+	Use o código "mkdir" para criar uma pasta, com qualquer nome.
+	Use o comando "cd (nome da pasta) " para entara na past.
+	Coloque no terminal o código "git clone https://github.com/andresantoss/Projeto_SO.git.
+	Use o  comando "cd Projeto_SO".
+	Execute o código: "python projeto.py".
