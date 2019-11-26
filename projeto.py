@@ -1,15 +1,12 @@
-import _thread
-import threading as _
+
+import threading as _  #biblioteca usada para importar as threads.
 class conta:
     def __init__(self,nome="",saldo=0):
         self.nome = nome
         self.saldo = saldo
-    def get_nome(self):
-        return self.nome
-    def get_saldo(self):
-        return self.saldo
-    def transference(self, valor_transferencia,conta2,x):
-        x.acquire()
+    def transference(self, valor_transferencia,conta2,trava): #criamos um def para realizar as transferencias entre contas. Essa função é chamda pela conta que ira enviar o dinhero, essa função também
+                                                              # recebe o valor de transferencia, a conta que ira receber o dinheiro e a variavel onde está a trava(lock).
+        trava.acquire() #controla o acesso restringindo o uso a uma thread.
         try:
             if self.saldo >= valor_transferencia:
                 self.saldo = self.saldo - valor_transferencia
@@ -19,22 +16,23 @@ class conta:
             else:
                 print(self.nome,'nao tem dinheiro\n')
         finally:
-            x.release()
+            trava.release() #libera o acesso para as outra thread.
 
 if __name__ == '__main__':
     contaA = conta("João", 100)
     contaB = conta("Maria", 0)
 
 
-    trava=_.Lock()
+    trava=_.Lock() #variavel que armazena a trava lock.
 
 
-    print(contaA.get_saldo(), contaA.get_nome())
-    print(contaB.get_saldo(), contaB.get_nome(),'\n')
+    print(contaA.saldo, contaA.nome)
+    print(contaB.saldo, contaB.nome,'\n')
 
 
     for i in range (100):
-        thread = _.Thread(target=contaA.transference, args=(10, contaB, trava))
+        thread = _.Thread(target=contaA.transference, args=(10, contaB, trava)) #thread que chama a função passando pra ela  o valor de transferencia, a conta que ira receber, e a variavel
+                                                                                #que contem a trava
         thread.start()
         thread = _.Thread(target=contaB.transference, args=(10, contaA, trava))
         thread.start()
