@@ -23,7 +23,7 @@ if __name__ == '__main__':
     contaB = conta("Maria", 0)
 
 
-    trava=_.Lock() #variavel que armazena a trava lock.
+    trava=_.Lock() #variavel que armazena o lock.
 
 
     print(contaA.saldo, contaA.nome)
@@ -31,8 +31,8 @@ if __name__ == '__main__':
 
 
     for i in range (100):
-        thread = _.Thread(target=contaA.transference, args=(10, contaB, trava)) #thread que chama a função passando pra ela  o valor de transferencia, a conta que ira receber, e a variavel
-                                                                                #que contem a trava
+        thread = _.Thread(target=contaA.transference, args=(10, contaB, trava)) #chama a função transference usando a conta que ira enviar o dinheiro  e passa pra ela os valores da transferencia,
+                                                                                #a conta que ira receber e a variavel que armazena o lock.
         thread.start()
         thread = _.Thread(target=contaB.transference, args=(10, contaA, trava))
         thread.start()
