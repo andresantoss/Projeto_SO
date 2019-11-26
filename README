@@ -4,3 +4,14 @@ Alunos:			            RA:
 André Gustavo Santos		21900345
 Davi Siqueira Galati		21905069
 Maria Eduarda Duarte		21908981
+
+Abra o Terminal.
+
+UBUNTU:
+mkdir pasta
+cd pasta
+git clone https://github.com/andresantoss/Projeto_SO.git
+cd Projeto_SO.pasta
+python3 projetoso.py
+
+WINDWONS:

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import _thread
 import threading as _
 class conta:
@@ -22,25 +21,24 @@ class conta:
         finally:
             x.release()
 
-        return 0
 if __name__ == '__main__':
     contaA = conta("João", 100)
     contaB = conta("Maria", 0)
 
 
-    a=_.Lock()
+    trava=_.Lock()
 
 
     print(contaA.get_saldo(), contaA.get_nome())
-    print(contaB.get_saldo(), contaB.get_nome())
+    print(contaB.get_saldo(), contaB.get_nome(),'\n')
 
 
     for i in range (100):
-        #_thread.start_new_thread(target=contaA.transference, args=(10,contaB,lock))
-        #_thread.start_new_thread(contaA.transference, (10, contaB, lock))
-        _thread.start_new_thread(contaB.transference, (10, contaA, a))
-        _thread.start_new_thread(contaA.transference, (10, contaB, a))
+        thread = _.Thread(target=contaA.transference, args=(10, contaB, trava))
+        thread.start()
+        thread = _.Thread(target=contaB.transference, args=(10, contaA, trava))
+        thread.start()
 
 
-    while True:
-        pass
+      #  th.append(_thread.start_new_thread(contaB.transference, (10, contaA, trava)))
+      #  th.append(_thread.start_new_thread(contaA.transference, (10, contaB, trava)))
