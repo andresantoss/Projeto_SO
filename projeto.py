@@ -54,7 +54,7 @@ if __name__ == '__main__':
 
     print(contaA.saldo, contaA.nome,'\n')
 
-    for a in range (1000):
+    for a in range (10000):
 
         contaB.thread(10,contaA,trava)
 
