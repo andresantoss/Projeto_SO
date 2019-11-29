@@ -30,7 +30,7 @@ if __name__ == '__main__':
     print(contaB.saldo, contaB.nome,'\n')
 
 
-    for i in range (10000):
+    for i in range (100):
         thread = _.Thread(target=contaB.transference, args=(10, contaA, trava)) #chama a função transference usando a conta que ira enviar o dinheiro  e passa pra ela os valores da transferencia,
                                                                                 #a conta que ira receber e a variavel que armazena o lock.
         thread.start()
