@@ -11,16 +11,16 @@ Certifique-se que a máquina possui o GIT instalado.
 
 Abra o Terminal.
 		
-LINUX:
+#LINUX:
 	Use o código "mkdir" para criar uma pasta no disco, com qualqure nome.
 	Use o código "cd (nome da pasta)" para acessar a pasta.
 	Coloque no terminal o códgio "git clone https://github.com/andresantoss/Projeto_SO.git"
 	Use o código "cd Projeto_SO.(nome da pasta).
 	Execute o código: "python3 projeto.py"
 
-WINDWONS:
+#WINDWONS:
 	Use o código "mkdir" para criar uma pasta, com qualquer nome.
 	Use o comando "cd (nome da pasta) " para entara na past.
-	Coloque no terminal o código "git clone https://github.com/andresantoss/Projeto_SO.git.
+	Coloque no terminal o código "git clone https://github.com/andresantoss/Projeto_SO.git"
 	Use o  comando "cd Projeto_SO".
 	Execute o código: "py projeto.py".
