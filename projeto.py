@@ -39,7 +39,9 @@ class conta:
             thread = _.Thread(target=self.transference, args=(valor_de_transferencia, conta2, trava))
 
             thread.start()
+            thread = _.Thread(target=conta2.transference, args=(valor_de_transferencia, self, trava))
 
+            thread.start()
 
 
 if __name__ == '__main__':
@@ -50,12 +52,11 @@ if __name__ == '__main__':
 
     trava=_.Lock()
 
-    print(contaB.saldo, contaB.nome)
+    print(contaA.saldo, contaA.nome)
 
-    print(contaA.saldo, contaA.nome,'\n')
+    print(contaB.saldo, contaB.nome,'\n')
 
     for a in range (10000):
 
-        contaB.thread(10,contaA,trava)
-
         contaA.thread(10,contaB,trava)
+
