@@ -50,12 +50,12 @@ if __name__ == '__main__':
 
     trava=_.Lock()
 
-    print(contaA.saldo, contaA.nome)
+    print(contaB.saldo, contaB.nome)
 
-    print(contaB.saldo, contaB.nome,'\n')
+    print(contaA.saldo, contaA.nome,'\n')
 
-    for a in range (100):
-
-        contaA.thread(10,contaB,trava)
+    for a in range (1000):
 
         contaB.thread(10,contaA,trava)
+
+        contaA.thread(10,contaB,trava)
