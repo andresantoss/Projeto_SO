@@ -15,12 +15,12 @@ LINUX:
 	Use o código "mkdir" para criar uma pasta no disco, com qualqure nome. exemplo: mkdir teste
 	Use o código "cd (nome da pasta)" para acessar a pasta. exemplo: cd teste
 	Coloque no terminal o códgio "git clone https://github.com/andresantoss/Projeto_SO.git"
-	Use o código "cd Projeto_SO.(nome da pasta).
+	Use o código "cd Projeto_SO"
 	Execute o código: "python3 projeto.py"
 
 WINDWONS:
 	Use o código "mkdir" para criar uma pasta, com qualquer nome. exemplo: mkdir teste
 	Use o comando "cd (nome da pasta) " para entara na past. exemplo: cd teste
 	Coloque no terminal o código "git clone https://github.com/andresantoss/Projeto_SO.git"
-	Use o  comando "cd Projeto_SO".
-	Execute o código: "py projeto.py".
+	Use o  comando "cd Projeto_SO"
+	Execute o código: "py projeto.py"
