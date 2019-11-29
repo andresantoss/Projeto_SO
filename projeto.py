@@ -36,6 +36,3 @@ if __name__ == '__main__':
         thread.start()
         thread = _.Thread(target=contaB.transference, args=(10, contaA, trava))
         thread.start()
-      
-        thread = _.Thread(target=contaB. transference, args=(10,contaA, trava))
-        thread.start
